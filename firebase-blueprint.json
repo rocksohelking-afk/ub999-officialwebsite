@@ -1,0 +1,81 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Registered player profiles with balances and status",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "phone": { "type": "string" },
+        "username": { "type": "string" },
+        "balance": { "type": "number" },
+        "status": { "type": "string", "enum": ["active", "banned"] },
+        "createdAt": { "type": "string" },
+        "lastLogin": { "type": "string" }
+      },
+      "required": ["id", "phone", "balance", "status"]
+    },
+    "DepositRequest": {
+      "title": "Deposit Request",
+      "description": "User deposit payment transaction requests",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "phone": { "type": "string" },
+        "method": { "type": "string", "enum": ["bkash", "nagad", "rocket"] },
+        "amount": { "type": "number" },
+        "trxId": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "approved", "rejected"] },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "userId", "method", "amount", "trxId", "status"]
+    },
+    "WithdrawRequest": {
+      "title": "Withdraw Request",
+      "description": "User withdrawal payment requests",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "phone": { "type": "string" },
+        "method": { "type": "string", "enum": ["bkash", "nagad", "rocket"] },
+        "amount": { "type": "number" },
+        "accountNumber": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "approved", "rejected"] },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "userId", "method", "amount", "accountNumber", "status"]
+    },
+    "SystemSetting": {
+      "title": "System Setting",
+      "description": "Global website configuration, payment numbers, and notice",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "bkashNumber": { "type": "string" },
+        "nagadNumber": { "type": "string" },
+        "rocketNumber": { "type": "string" },
+        "marqueeNotice": { "type": "string" },
+        "winRate": { "type": "number" },
+        "maintenanceMode": { "type": "boolean" }
+      },
+      "required": ["id"]
+    },
+    "LiveSignal": {
+      "title": "Live Signal",
+      "description": "Real-time signals pushed by admin to the Signal App",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "gameType": { "type": "string", "enum": ["aviator", "wingo", "slots"] },
+        "period": { "type": "string" },
+        "predictedValue": { "type": "string" },
+        "accuracy": { "type": "number" },
+        "status": { "type": "string", "enum": ["active", "expired"] },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "gameType", "predictedValue", "accuracy"]
+    }
+  }
+}

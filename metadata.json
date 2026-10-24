@@ -1,0 +1,6 @@
+{
+  "name": "Multi-App Ecosystem Architect",
+  "description": "Multi-App connected ecosystem architecture, communication protocols, and deployment blueprint.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

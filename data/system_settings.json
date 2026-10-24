@@ -1,0 +1,32 @@
+{
+  "bkashNumber": "01349782631",
+  "nagadNumber": "01768782530",
+  "rocketNumber": "",
+  "bkashNumbers": [
+    "01349782631",
+    "01318097241",
+    "01357287095",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "nagadNumbers": [
+    "01768782530",
+    "01349845888",
+    "01349845906",
+    "01349845902",
+    "01347246605"
+  ],
+  "activeBkashIndex": 0,
+  "activeNagadIndex": 0,
+  "marqueeNotice": "🎉 UB999 অফিশিয়াল প্ল্যাটফর্মে স্বাগতম! প্রথম ডিপোজিটে ১০০% ওয়েলকাম বোনাস!",
+  "winRate": 65,
+  "aviatorNextTarget": 2.85,
+  "aviatorRigMode": "auto",
+  "updatedAt": 1792049518984,
+  "firebaseRtdbUrl": "https://ub-999-project-default-rtdb.firebaseio.com"
+}
