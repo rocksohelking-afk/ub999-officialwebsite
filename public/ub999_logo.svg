@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Outer Gold Border Gradient -->
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff099" />
+      <stop offset="25%" stop-color="#dfa528" />
+      <stop offset="50%" stop-color="#fff8be" />
+      <stop offset="75%" stop-color="#c68a15" />
+      <stop offset="100%" stop-color="#f5cc59" />
+    </linearGradient>
+
+    <!-- Inner Emerald Gradient -->
+    <radialGradient id="emeraldBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#0a5343" />
+      <stop offset="60%" stop-color="#04382c" />
+      <stop offset="100%" stop-color="#01221a" />
+    </radialGradient>
+
+    <!-- Gold Badge Gradient -->
+    <linearGradient id="badgeGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff4a3" />
+      <stop offset="30%" stop-color="#ffd23f" />
+      <stop offset="70%" stop-color="#e09d15" />
+      <stop offset="100%" stop-color="#b87b0a" />
+    </linearGradient>
+
+    <!-- Crown Gold Gradient -->
+    <linearGradient id="crownGold" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b37807" />
+      <stop offset="30%" stop-color="#ffd54f" />
+      <stop offset="50%" stop-color="#fff9c4" />
+      <stop offset="80%" stop-color="#ffb300" />
+      <stop offset="100%" stop-color="#8d5c03" />
+    </linearGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="badgeShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.6" />
+    </filter>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Base Rounded Rectangle Frame -->
+  <rect x="12" y="12" width="488" height="488" rx="88" fill="url(#emeraldBg)" stroke="url(#goldBorder)" stroke-width="18" />
+  <!-- Inner Gold Inset Rim -->
+  <rect x="26" y="26" width="460" height="460" rx="76" fill="none" stroke="#f6cf65" stroke-width="3" stroke-opacity="0.8" />
+  <rect x="34" y="34" width="444" height="444" rx="68" fill="none" stroke="#001813" stroke-width="4" stroke-opacity="0.9" />
+
+  <!-- ==================== 1. FANNED PLAYING CARDS ON TOP ==================== -->
+  <g transform="translate(0, 15)">
+    <!-- Leftmost card (Spade) -->
+    <g transform="translate(110, 120) rotate(-22)">
+      <rect x="-35" y="-55" width="70" height="110" rx="6" fill="#141416" stroke="#c69528" stroke-width="2.5" />
+      <path d="M-22 -40 l2.5 -4.5 l2.5 4.5 z" fill="#ffd54f" />
+      <path d="M0 -5 C-12 -22 -20 2 0 16 C20 2 12 -22 0 -5 Z" fill="#dfa82b" />
+      <path d="M-3 15 L3 15 L5 25 L-5 25 Z" fill="#dfa82b" />
+    </g>
+
+    <!-- Mid-Left card (Heart) -->
+    <g transform="translate(180, 95) rotate(-11)">
+      <rect x="-35" y="-55" width="70" height="110" rx="6" fill="#141416" stroke="#c69528" stroke-width="2.5" />
+      <path d="M0 -5 C-10 -20 -22 -6 -10 8 L0 18 L10 8 C22 -6 10 -20 0 -5 Z" fill="#dfa82b" />
+    </g>
+
+    <!-- Center-Right card (Club) -->
+    <g transform="translate(332, 95) rotate(11)">
+      <rect x="-35" y="-55" width="70" height="110" rx="6" fill="#141416" stroke="#c69528" stroke-width="2.5" />
+      <circle cx="0" cy="-6" r="8" fill="#dfa82b" />
+      <circle cx="-7" cy="5" r="8" fill="#dfa82b" />
+      <circle cx="7" cy="5" r="8" fill="#dfa82b" />
+      <path d="M-2 5 L2 5 L4 18 L-4 18 Z" fill="#dfa82b" />
+    </g>
+
+    <!-- Rightmost card (Heart) -->
+    <g transform="translate(402, 120) rotate(22)">
+      <rect x="-35" y="-55" width="70" height="110" rx="6" fill="#141416" stroke="#c69528" stroke-width="2.5" />
+      <path d="M0 -5 C-10 -20 -22 -6 -10 8 L0 18 L10 8 C22 -6 10 -20 0 -5 Z" fill="#dfa82b" />
+    </g>
+  </g>
+
+  <!-- ==================== 2. GOLD ROYAL CROWN ==================== -->
+  <g transform="translate(256, 116)" filter="url(#badgeShadow)">
+    <!-- Velvet Cap Interior -->
+    <path d="M-72 32 C-70 -20, 70 -20, 72 32 Z" fill="#4a0e4e" opacity="0.9" />
+
+    <!-- Crown Base Arch & Filigree -->
+    <path d="M-88 38 C-40 46, 40 46, 88 38 L84 20 C38 26, -38 26, -84 20 Z" fill="url(#crownGold)" stroke="#664100" stroke-width="1.5" />
+    
+    <!-- Crown Ribs & Peaks -->
+    <!-- Center Peak -->
+    <path d="M0 -42 L12 25 L-12 25 Z" fill="url(#crownGold)" />
+    <!-- Cross on top of center spire -->
+    <path d="M-3 -52 H3 V-42 H-3 Z" fill="#ffe082" />
+    <path d="M-8 -48 H8 V-44 H-8 Z" fill="#ffe082" />
+    <!-- Left Major Peak -->
+    <path d="M-52 -18 C-42 6, -30 20, -20 28 C-38 28, -55 24, -68 20 C-62 6, -58 -8, -52 -18 Z" fill="url(#crownGold)" />
+    <!-- Right Major Peak -->
+    <path d="M52 -18 C42 6, 30 20, 20 28 C38 28, 55 24, 68 20 C62 6, 58 -8, 52 -18 Z" fill="url(#crownGold)" />
+    <!-- Outer Left & Right Spires -->
+    <path d="M-84 20 L-76 -2 L-66 22 Z" fill="url(#crownGold)" />
+    <path d="M84 20 L76 -2 L66 22 Z" fill="url(#crownGold)" />
+
+    <!-- Crown Jewels on rim -->
+    <circle cx="0" cy="33" r="5" fill="#e52338" stroke="#ffe082" stroke-width="1.5" />
+    <circle cx="-35" cy="31" r="4.5" fill="#00e676" stroke="#ffe082" stroke-width="1.5" />
+    <circle cx="35" cy="31" r="4.5" fill="#00e676" stroke="#ffe082" stroke-width="1.5" />
+    <circle cx="-65" cy="27" r="4" fill="#e52338" stroke="#ffe082" stroke-width="1.2" />
+    <circle cx="65" cy="27" r="4" fill="#e52338" stroke="#ffe082" stroke-width="1.2" />
+
+    <!-- Spire Pearl Tips -->
+    <circle cx="-76" cy="-3" r="4" fill="#fff9c4" />
+    <circle cx="-52" cy="-18" r="5" fill="#fff9c4" />
+    <circle cx="0" cy="-42" r="5.5" fill="#fff9c4" />
+    <circle cx="52" cy="-18" r="5" fill="#fff9c4" />
+    <circle cx="76" cy="-3" r="4" fill="#fff9c4" />
+  </g>
+
+  <!-- ==================== 3. CENTRAL SHIELD / BADGE ==================== -->
+  <g filter="url(#badgeShadow)">
+    <!-- Outer Red Border of Banner -->
+    <path d="M 40 180 L 256 138 L 472 180 L 472 344 L 256 386 L 40 344 Z" fill="#cf1124" stroke="#ff384c" stroke-width="3" />
+    <!-- Inner Red Bevel -->
+    <path d="M 46 184 L 256 144 L 466 184 L 466 340 L 256 380 L 46 340 Z" fill="#a00817" />
+    
+    <!-- Main Gold Face of the Shield -->
+    <path d="M 54 190 L 256 150 L 458 190 L 458 334 L 256 374 L 54 334 Z" fill="url(#badgeGold)" stroke="#ffd700" stroke-width="3" />
+    
+    <!-- Subtle Golden Light Ridge Split (left lighter, right deeper) -->
+    <path d="M 256 150 L 458 190 L 458 334 L 256 374 Z" fill="#000000" opacity="0.08" />
+  </g>
+
+  <!-- ==================== 4. "UB999" BRAND TYPOGRAPHY ==================== -->
+  <!-- Crisp, bold, green display text with gold bevel & outline -->
+  <g transform="translate(256, 308)" text-anchor="middle" filter="url(#glow)">
+    <!-- Shadow behind text -->
+    <text x="0" y="5" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="142" letter-spacing="4" fill="#001a12" opacity="0.6">
+      UB999
+    </text>
+    <!-- Gold Outermost Stroke -->
+    <text x="0" y="0" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="142" letter-spacing="4" fill="none" stroke="#fff176" stroke-width="14" stroke-linejoin="round">
+      UB999
+    </text>
+    <!-- Dark Gold / Bronze Rim -->
+    <text x="0" y="0" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="142" letter-spacing="4" fill="none" stroke="#a36e05" stroke-width="8" stroke-linejoin="round">
+      UB999
+    </text>
+    <!-- Inner Forest Emerald Green Fill -->
+    <text x="0" y="0" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="142" letter-spacing="4" fill="#065942">
+      UB999
+    </text>
+    <!-- Top Highlight Glint on Text -->
+    <text x="0" y="-2" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="142" letter-spacing="4" fill="none" stroke="#16a34a" stroke-width="2" opacity="0.7">
+      UB999
+    </text>
+  </g>
+
+  <!-- ==================== 5. BOTTOM CARD SUIT JEWELS & FILIGREE ==================== -->
+  <g transform="translate(0, 10)">
+    <!-- 1. Blue Spade Jewel -->
+    <g transform="translate(186, 420)">
+      <circle cx="0" cy="0" r="17" fill="url(#crownGold)" stroke="#523200" stroke-width="1.5" />
+      <path d="M0 -9 C-6 -18 -12 -5 0 7 C12 -5 6 -18 0 -9 Z" fill="#00b0ff" stroke="#80d8ff" stroke-width="1" />
+      <path d="M-2 6 L2 6 L3 12 L-3 12 Z" fill="#00b0ff" />
+    </g>
+
+    <!-- 2. Green Diamond Jewel -->
+    <g transform="translate(232, 420)">
+      <circle cx="0" cy="0" r="17" fill="url(#crownGold)" stroke="#523200" stroke-width="1.5" />
+      <path d="M0 -11 L9 0 L0 11 L-9 0 Z" fill="#00e676" stroke="#b9f6ca" stroke-width="1" />
+    </g>
+
+    <!-- 3. Purple Club Jewel -->
+    <g transform="translate(280, 420)">
+      <circle cx="0" cy="0" r="17" fill="url(#crownGold)" stroke="#523200" stroke-width="1.5" />
+      <circle cx="0" cy="-5" r="5" fill="#d500f9" />
+      <circle cx="-5.5" cy="3" r="5" fill="#d500f9" />
+      <circle cx="5.5" cy="3" r="5" fill="#d500f9" />
+      <path d="M-2 3 L2 3 L3 10 L-3 10 Z" fill="#d500f9" />
+    </g>
+
+    <!-- 4. Orange / Golden Heart Jewel -->
+    <g transform="translate(326, 420)">
+      <circle cx="0" cy="0" r="17" fill="url(#crownGold)" stroke="#523200" stroke-width="1.5" />
+      <path d="M0 -4 C-5 -13 -12 -5 -6 3 L0 10 L6 3 C12 -5 5 -13 0 -4 Z" fill="#ff9100" stroke="#ffe57f" stroke-width="1" />
+    </g>
+
+    <!-- Bottom Gold Baroque Filigree Swirls -->
+    <path d="M 64 458 C 140 440, 200 464, 256 462 C 312 464, 372 440, 448 458" fill="none" stroke="url(#goldBorder)" stroke-width="3" stroke-linecap="round" />
+    <circle cx="256" cy="462" r="4" fill="#ffd54f" />
+    <path d="M 230 464 C 240 472, 272 472, 282 464" fill="none" stroke="#ffd54f" stroke-width="2.5" />
+  </g>
+</svg>
